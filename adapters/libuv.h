@@ -23,7 +23,7 @@ static void redisLibuvPoll(uv_poll_t* handle, int status, int events) {
   if ((events & UV_READABLE) && (p->context != NULL)) {
     redisAsyncHandleRead(p->context);
   }
-  if ((events & UV_WRITABLE) && (p->context != NULL) {
+  if ((events & UV_WRITABLE) && (p->context != NULL)) {
     redisAsyncHandleWrite(p->context);
   }
 }
